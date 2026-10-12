@@ -1,0 +1,56 @@
+:root, [data-theme="light"] {
+  --brand-blue: #1d4483;
+  --deep-blue: #022563;
+  --support-blue: #2f5a98;
+  --mustard: #dca211;
+  --mustard-strong: #c79500;
+  --cream: #f3e3cf;
+  --cream-light: #faf5ec;
+  --white: #ffffff;
+  --ink: #1b2b4b;
+  --ink-muted: #4a5878;
+  --line: #e3d6c3;
+  --shadow-card: 0 2px 12px rgba(2, 37, 99, 0.08);
+  --shadow-sticky-bar: 0 -2px 12px rgba(2, 37, 99, 0.12);
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-balloon: 40px;
+  --radius-pill: 999px;
+  --container-text: 640px;
+  --container-page: 1120px;
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 3px;
+  --size-icon: 24px;
+  --size-pill-dot: 12px;
+  --size-step-number: 32px;
+  --size-video-play: 64px;
+  --size-partner-photo: 72px;
+  --size-touch-target: 48px;
+  --size-balloons-sm: 140px;
+  --font-brand: Lobster, "Brush Script MT", cursive;
+  --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.logo { font-family: var(--font-brand); font-size: 44px; line-height: 1; font-weight: 400; }
+.logo-sm { font-family: var(--font-brand); font-size: 30px; line-height: 1; font-weight: 400; }
+.logo-lg { font-family: var(--font-brand); font-size: 64px; line-height: 1; font-weight: 400; }
+.pill { font-family: var(--font-brand); font-size: 28px; line-height: 1.15; font-weight: 400; }
+.display { font-family: var(--font-heading); font-size: 44px; line-height: 1.12; font-weight: 800; letter-spacing: -0.01em; }
+.h2 { font-family: var(--font-heading); font-size: 32px; line-height: 1.2; font-weight: 700; }
+.h3 { font-family: var(--font-heading); font-size: 21px; line-height: 1.3; font-weight: 700; }
+.body-lg { font-family: var(--font-body); font-size: 19px; line-height: 1.6; font-weight: 400; }
+.body { font-family: var(--font-body); font-size: 17px; line-height: 1.6; font-weight: 400; }
+.small { font-family: var(--font-body); font-size: 14px; line-height: 1.5; font-weight: 400; }
+.label { font-family: var(--font-body); font-size: 13px; line-height: 1.4; font-weight: 700; letter-spacing: 0.12em; }
+.button { font-family: var(--font-body); font-size: 17px; line-height: 1.2; font-weight: 700; }

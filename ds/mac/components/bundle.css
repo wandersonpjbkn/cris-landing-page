@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700;800&display=swap");
+
+/* ── Base ── */
+.mac-section, .mac-section *, .mac-whatsapp-button, .mac-pill, .mac-logo { box-sizing: border-box; }
+.mac-section { position: relative; overflow: hidden; padding: var(--space-12) var(--space-4); background: var(--white); color: var(--ink); font-family: var(--font-body); }
+.mac-section--cream { background: var(--cream); }
+.mac-section--brand { background: var(--brand-blue); color: var(--white); }
+.mac-section--tight { padding-top: 0; }
+.mac-content { max-width: var(--container-text); margin: 0 auto; position: relative; z-index: 1; }
+@media (min-width: 600px) { .mac-section { padding: var(--space-16) var(--space-8); } }
+
+/* ── Typography ── */
+.mac-heading { color: var(--deep-blue); margin: 0 0 var(--space-2); }
+h2.mac-heading { margin-bottom: var(--space-6); }
+.mac-display { color: var(--deep-blue); margin: var(--space-4) 0; }
+.mac-lead { margin: 0 0 var(--space-6); }
+.mac-eyebrow { color: var(--support-blue); margin: 0 0 var(--space-3); text-transform: uppercase; }
+.mac-muted { color: var(--ink-muted); }
+.mac-on-brand { color: var(--white); }
+.mac-eyebrow.mac-on-brand, .mac-on-brand-muted { color: var(--cream); }
+.mac-section p, .mac-section dd, .mac-section dl, .mac-section blockquote { margin-top: 0; }
+@media (max-width: 599px) {
+  .mac-display { font-size: 34px; }
+  h2.mac-heading { font-size: 28px; }
+}
+
+/* ── Accessibility ── */
+.mac-visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ── Icon ── */
+.mac-icon { width: var(--size-icon); height: var(--size-icon); flex: none; }
+
+/* ── Pill ── */
+.mac-pill { display: inline-flex; align-items: center; gap: var(--space-2); max-width: 100%; padding: var(--space-2) var(--space-6) var(--space-3) var(--space-4); border-radius: var(--radius-pill); background: var(--white); }
+.mac-pill--on-cream { background: var(--cream); }
+.mac-pill-dot { width: var(--size-pill-dot); height: var(--size-pill-dot); border-radius: 50%; background: var(--mustard); flex: none; }
+.mac-pill-text { color: var(--deep-blue); margin: 0; text-wrap: balance; }
+@media (max-width: 599px) { .mac-pill-text { font-size: 24px; } }
+
+/* ── Logo ── */
+.mac-logo { display: inline-flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); color: var(--deep-blue); }
+.mac-logo-mark { transform: rotate(-8deg); transform-origin: left center; padding: 0.1em 0 0.15em; }
+.mac-logo-signature { font-size: 0.45em; padding-left: 2em; }
+.mac-logo-signature b { font-weight: inherit; color: var(--brand-blue); }
+.mac-logo--on-brand, .mac-logo--on-brand .mac-logo-signature b { color: var(--cream); }
+
+/* ── WhatsApp button ── */
+.mac-whatsapp-button { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: var(--size-touch-target); padding: var(--space-4) var(--space-6); border-radius: var(--radius-pill); background: var(--mustard); color: var(--deep-blue); text-decoration: none; text-align: center; cursor: pointer; transition: background-color .15s ease; }
+.mac-whatsapp-button:hover, .mac-whatsapp-button:active { background: var(--mustard-strong); }
+.mac-whatsapp-button:focus-visible { outline: var(--focus-ring-width) solid var(--deep-blue); outline-offset: var(--focus-ring-offset); }
+.mac-whatsapp-button--on-brand:focus-visible { outline-color: var(--mustard); }
+@media (max-width: 599px) { .mac-whatsapp-button { width: 100%; } }
+
+/* ── Sticky bar ── */
+.mac-sticky-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom)); background: var(--white); box-shadow: var(--shadow-sticky-bar); transform: translateY(110%); visibility: hidden; transition: transform .2s ease, visibility 0s linear .2s; }
+.mac-sticky-bar[data-visible="true"] { transform: none; visibility: visible; transition: transform .2s ease; }
+.mac-sticky-bar .mac-whatsapp-button { width: 100%; }
+html:has(.mac-sticky-bar[data-visible="true"]) { scroll-padding-bottom: calc(var(--size-touch-target) + var(--space-6) + var(--space-6) + env(safe-area-inset-bottom)); }
+@media (min-width: 900px) { .mac-sticky-bar { display: none; } }
+
+/* ── Balloons ── */
+.mac-balloons { display: block; pointer-events: none; }
+.mac-balloon-back { fill: var(--mustard); }
+.mac-balloon-front { fill: var(--support-blue); }
+.mac-balloons--on-brand .mac-balloon-front { fill: var(--cream); }
+
+/* ── Photo ── */
+.mac-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius-md); background: var(--cream); }
+.mac-photo--empty { display: flex; align-items: flex-end; padding: var(--space-4); color: var(--ink-muted); }
+
+/* ── Video ── */
+.mac-video { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden; cursor: pointer; background: var(--deep-blue); font-family: var(--font-body); }
+.mac-video img, .mac-video-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mac-video-backdrop { background: var(--brand-blue); }
+.mac-video-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: var(--size-video-play); height: var(--size-video-play); border-radius: 50%; background: var(--cream); color: var(--deep-blue); display: flex; align-items: center; justify-content: center; }
+.mac-video-title { position: absolute; left: var(--space-4); bottom: var(--space-4); color: var(--white); background: var(--deep-blue); padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm); text-align: left; }
+.mac-video:focus-visible { outline: var(--focus-ring-width) solid var(--deep-blue); outline-offset: var(--focus-ring-offset); }
+.mac-video-frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-md); }
+
+/* ── Hero ── */
+.mac-hero { background: var(--cream-light); padding-top: var(--space-8); }
+.mac-hero-grid { max-width: var(--container-page); margin: 0 auto; display: grid; gap: var(--space-6); }
+.mac-hero-media { position: relative; order: -1; width: 100%; }
+.mac-hero-photo { position: relative; z-index: 1; aspect-ratio: 4 / 3; }
+.mac-hero-balloons { position: absolute; z-index: 0; right: calc(var(--space-8) * -1); top: calc(var(--space-6) * -1); width: var(--size-balloons-sm); height: var(--size-balloons-sm); }
+.mac-hero-note { margin-top: var(--space-3); }
+@media (min-width: 900px) {
+  .mac-hero { padding: var(--space-16) var(--space-8) var(--space-24); }
+  .mac-hero-grid { grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: var(--space-16); }
+  .mac-hero-media { order: 0; }
+  .mac-hero-photo { aspect-ratio: 4 / 5; }
+}
+
+/* ── How it works ── */
+.mac-steps { list-style: none; margin: 0 0 var(--space-8); padding: 0; display: grid; gap: var(--space-4); }
+.mac-step { background: var(--white); border-radius: var(--radius-md); padding: var(--space-6); box-shadow: var(--shadow-card); }
+.mac-step-number { display: inline-flex; align-items: center; justify-content: center; width: var(--size-step-number); height: var(--size-step-number); border-radius: 50%; background: var(--deep-blue); color: var(--white); font-weight: 700; margin-bottom: var(--space-3); }
+
+/* ── Authority ── */
+.mac-authority-grid { max-width: var(--container-page); margin: 0 auto; display: grid; gap: var(--space-8); }
+.mac-authority-photo { aspect-ratio: 4 / 3; }
+.mac-facts { display: grid; gap: var(--space-4); margin: var(--space-6) 0; padding: var(--space-6) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.mac-fact dt { margin-bottom: var(--space-1); }
+.mac-fact dd { margin: 0; }
+.mac-credential { margin-bottom: var(--space-1); }
+@media (min-width: 600px) { .mac-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 900px) {
+  .mac-authority-grid { grid-template-columns: 0.85fr 1.15fr; align-items: start; gap: var(--space-16); }
+  .mac-authority-photo { aspect-ratio: 4 / 5; }
+}
+
+/* ── Partner ── */
+.mac-partner { display: grid; grid-template-columns: var(--size-partner-photo) 1fr; gap: var(--space-4); align-items: start; max-width: var(--container-text); margin: 0 auto; padding: var(--space-6); background: var(--cream-light); border-radius: var(--radius-md); }
+.mac-partner-photo { aspect-ratio: 1; border-radius: var(--radius-sm); }
+.mac-partner-photo.mac-photo--empty { padding: 0; }
+
+/* ── Testimonials ── */
+.mac-testimonials-list { display: grid; gap: var(--space-4); margin-bottom: var(--space-8); }
+.mac-testimonial { margin: 0; background: var(--cream); color: var(--ink); border-radius: var(--radius-balloon) var(--radius-balloon) var(--radius-sm) var(--radius-balloon); padding: var(--space-8) var(--space-6) var(--space-6); }
+.mac-testimonial blockquote { margin: 0 0 var(--space-4); }
+.mac-testimonial blockquote p { margin: 0; }
+.mac-testimonial figcaption { color: var(--ink-muted); }
+.mac-testimonial figcaption b { color: var(--deep-blue); }
+
+/* ── FAQ ── */
+.mac-faq-video { margin-bottom: var(--space-8); }
+.mac-faq-list { border-top: 1px solid var(--line); }
+.mac-faq-item { border-bottom: 1px solid var(--line); }
+.mac-faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); min-height: var(--size-touch-target); padding: var(--space-4) 0; margin: 0; cursor: pointer; }
+.mac-faq-item summary::-webkit-details-marker { display: none; }
+.mac-faq-item summary .mac-icon { color: var(--support-blue); transition: transform .15s ease; }
+.mac-faq-item[open] summary .mac-icon { transform: rotate(45deg); }
+.mac-faq-item summary:focus-visible { outline: var(--focus-ring-width) solid var(--deep-blue); outline-offset: var(--focus-ring-offset); border-radius: var(--radius-sm); }
+.mac-faq-item > p { margin: 0 0 var(--space-4); color: var(--ink); }
+
+/* ── Footer ── */
+.mac-footer-grid { max-width: var(--container-page); margin: 0 auto; display: grid; gap: var(--space-12); position: relative; z-index: 1; }
+.mac-footer-subtitle { margin-bottom: var(--space-6); }
+.mac-footer-links { list-style: none; padding: 0; margin: var(--space-6) 0; display: grid; gap: var(--space-1); }
+.mac-footer-links a { display: inline-flex; align-items: center; min-height: var(--size-touch-target); color: var(--white); text-underline-offset: var(--space-1); }
+.mac-footer-links a:focus-visible { outline: var(--focus-ring-width) solid var(--mustard); outline-offset: var(--focus-ring-offset); }
+@media (min-width: 900px) { .mac-footer-grid { grid-template-columns: 1.2fr 0.8fr; align-items: end; } }
+
+/* ── Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .mac-sticky-bar, .mac-sticky-bar[data-visible="true"], .mac-whatsapp-button, .mac-faq-item summary .mac-icon { transition: none; }
+}

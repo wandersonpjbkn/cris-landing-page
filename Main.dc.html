@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Mentoria de carreira · Me Ajuda Carreira</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="lp-tokens.css">
+<link rel="stylesheet" href="ds/mac/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Open+Sans:wght@400;700;800&amp;display=swap">
+<style>
+body{margin:0;background:var(--cream-light);font-family:var(--font-body);color:var(--ink)}
+a{color:var(--deep-blue)}a:hover{color:var(--brand-blue)}
+.mac-hero-photo{object-position:50% 18%}
+.lp-photo-after .mac-hero-media{order:0}
+.lp-audience-list{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-3)}
+.lp-audience-item{display:flex;gap:var(--space-3);align-items:flex-start}
+.lp-audience-item .mac-icon{color:var(--support-blue);margin-top:2px}
+@media (min-width:600px){.lp-audience-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-8)}}
+</style>
+</helmet>
+<div style="width: 100%; background: var(--cream-light);">
+
+<section class="mac-section mac-hero {{heroOrderClass}}" data-section="hero">
+<div class="mac-hero-grid">
+<div class="mac-hero-copy">
+<div class="mac-pill mac-pill--on-cream"><span class="mac-pill-dot" aria-hidden="true"></span><p class="pill mac-pill-text">Mentoria de carreira</p></div>
+<h1 class="display mac-display">Vamos conversar sobre o seu momento?</h1>
+<p class="body-lg mac-lead">Uma conversa individual, com atenção e acolhimento, sobre onde você está e para onde quer ir na carreira.</p>
+<a class="button mac-whatsapp-button" href="{{whatsAppHref}}" target="_blank" rel="noopener" data-event="whatsapp_click" data-section="hero"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H9l-4 3v-3.5A4 4 0 0 1 3 14V8a4 4 0 0 1 4-4z"></path></svg><span>{{buttonLabel}}</span><span class="mac-visually-hidden"> (abre o WhatsApp em uma nova aba)</span></a>
+<sc-if value="{{credentialInHero}}" hint-placeholder-val="{{credentialInHero}}">
+<p class="small mac-muted mac-hero-note">Cristina Diniz Coral · Psicóloga · [CRP] · mais de 500 profissionais atendidos</p>
+</sc-if>
+<sc-if value="{{noteInHero}}" hint-placeholder-val="{{noteInHero}}">
+<p class="small mac-muted mac-hero-note">On-line, com horário combinado com você.</p>
+</sc-if>
+</div>
+<div class="mac-hero-media">
+<svg class="mac-balloons mac-hero-balloons" viewBox="0 0 160 160" width="160" height="160" aria-hidden="true" focusable="false"><path class="mac-balloon-back" d="M40 0H60A40 40 0 0 1 100 40V92A8 8 0 0 1 92 100H40A40 40 0 0 1 0 60V40A40 40 0 0 1 40 0Z" transform="translate(52 6) rotate(-12 50 50) scale(0.92)"></path><path class="mac-balloon-front" d="M40 0H60A40 40 0 0 1 100 40V92A8 8 0 0 1 92 100H40A40 40 0 0 1 0 60V40A40 40 0 0 1 40 0Z" transform="translate(8 44) rotate(-14 50 50) scale(1.05)"></path></svg>
+<img class="mac-photo mac-hero-photo" src="./assets/79b2af723827c95f75b430c40e9162a1.jpg" alt="Cristina Diniz Coral, psicóloga e mentora de carreira" loading="eager" decoding="async">
+</div>
+</div>
+</section>
+
+<section class="mac-section" data-section="audience">
+<div class="mac-content">
+<header class="mac-section-heading"><p class="label mac-eyebrow">Para quem é</p><h2 class="h2 mac-heading">A mentoria é para você que</h2></header>
+<ul class="lp-audience-list">
+<li class="lp-audience-item body"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>quer crescer na empresa onde está e assumir um cargo maior</span></li>
+<li class="lp-audience-item body"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>assumiu a primeira liderança há pouco tempo</span></li>
+<li class="lp-audience-item body"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>pensa em mudar de área ou de carreira</span></li>
+<li class="lp-audience-item body"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>quer entender melhor seus talentos e valores</span></li>
+<li class="lp-audience-item body"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>precisa se posicionar com mais segurança</span></li>
+<li class="lp-audience-item body"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>quer tomar decisões de carreira com mais clareza</span></li>
+</ul>
+</div>
+</section>
+
+<section class="mac-section mac-section--cream" data-section="how-it-works">
+<div class="mac-content">
+<header class="mac-section-heading"><p class="label mac-eyebrow">Como funciona</p><h2 class="h2 mac-heading">Uma troca individual, do seu jeito</h2></header>
+<ol class="mac-steps">
+<li class="mac-step"><span class="small mac-step-number" aria-hidden="true">1</span><h3 class="h3 mac-heading">Primeira conversa</h3><p class="body">Começamos por conhecer seu momento atual: o que está acontecendo e o que você quer mudar.</p></li>
+<li class="mac-step"><span class="small mac-step-number" aria-hidden="true">2</span><h3 class="h3 mac-heading">Encontros individuais</h3><p class="body">Encontros de uma hora pelo Google Meet, com frequência semanal, quinzenal ou mensal, combinada com você.</p></li>
+<li class="mac-step"><span class="small mac-step-number" aria-hidden="true">3</span><h3 class="h3 mac-heading">Seu plano de desenvolvimento</h3><p class="body">Ao longo dos encontros, construímos um plano a partir dos seus objetivos, com materiais de apoio entre uma sessão e outra.</p></li>
+</ol>
+<a class="button mac-whatsapp-button" href="{{whatsAppHref}}" target="_blank" rel="noopener" data-event="whatsapp_click" data-section="how-it-works"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H9l-4 3v-3.5A4 4 0 0 1 3 14V8a4 4 0 0 1 4-4z"></path></svg><span>{{buttonLabel}}</span><span class="mac-visually-hidden"> (abre o WhatsApp em uma nova aba)</span></a>
+</div>
+</section>
+
+<section class="mac-section" data-section="authority">
+<div class="mac-authority-grid">
+<div class="mac-photo mac-authority-photo mac-photo--empty" role="img" aria-label="[Segunda foto da Cris, em atendimento ou palestra]"><span class="small">[Segunda foto da Cris, em atendimento ou palestra]</span></div>
+<div>
+<header class="mac-section-heading"><p class="label mac-eyebrow">Quem conduz</p><h2 class="h2 mac-heading">Oi, eu sou a Cris</h2></header>
+<p class="body">Sou psicóloga, especialista em Gestão de Pessoas, e trabalhei mais de dez anos dentro de empresas, do recrutamento ao desenvolvimento de lideranças. Hoje uso essa experiência para acompanhar você nas decisões de carreira.</p>
+<dl class="mac-facts">
+<div class="mac-fact"><dt class="h3 mac-heading">desde 2017</dt><dd class="small mac-muted">à frente do Me Ajuda Carreira</dd></div>
+<div class="mac-fact"><dt class="h3 mac-heading">+500</dt><dd class="small mac-muted">profissionais atendidos</dd></div>
+<div class="mac-fact"><dt class="h3 mac-heading">+10 anos</dt><dd class="small mac-muted">em Recursos Humanos</dd></div>
+</dl>
+<p class="small mac-muted mac-credential">Cristina Diniz Coral · Psicóloga · [CRP]</p>
+<p class="small mac-muted">Psicologia (UNESP), especialização em Gestão de Pessoas (UFSCar) e MBA em Desenvolvimento Humano (IPOG).</p>
+</div>
+</div>
+</section>
+
+<section class="mac-section mac-section--brand" data-section="testimonials">
+<div class="mac-content">
+<header class="mac-section-heading"><p class="label mac-eyebrow mac-on-brand">Depoimentos</p><h2 class="h2 mac-heading mac-on-brand">Quem já conversou comigo</h2></header>
+<div class="mac-testimonials-list">
+<figure class="mac-testimonial"><blockquote class="body"><p>A Cris faz com que o processo de mentoria seja leve. Ela nos mostra que o (re)descobrimento dos nossos valores, virtudes e qualidades é importante para que possamos encontrar ou (re)descobrir caminhos assertivos para nossa carreira.</p></blockquote><figcaption class="small"><b>Stephany</b><span> · Engenheira Florestal · recomendação no LinkedIn</span></figcaption></figure>
+</div>
+<a class="button mac-whatsapp-button mac-whatsapp-button--on-brand" href="{{whatsAppHref}}" target="_blank" rel="noopener" data-event="whatsapp_click" data-section="testimonials"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H9l-4 3v-3.5A4 4 0 0 1 3 14V8a4 4 0 0 1 4-4z"></path></svg><span>{{buttonLabel}}</span><span class="mac-visually-hidden"> (abre o WhatsApp em uma nova aba)</span></a>
+</div>
+</section>
+
+<section class="mac-section" data-section="faq">
+<div class="mac-content">
+<header class="mac-section-heading"><h2 class="h2 mac-heading">Dúvidas comuns</h2></header>
+<div class="mac-faq-list">
+<details class="mac-faq-item"><summary class="h3 mac-heading"><span>Mentoria é terapia?</span><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="body">Não. A mentoria olha para a sua carreira e para as decisões que você tem pela frente. Se surgir algo que pede outro tipo de cuidado, eu te ajudo a encontrar o apoio certo.</p></details>
+<details class="mac-faq-item"><summary class="h3 mac-heading"><span>É um atendimento só meu?</span><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="body">Sim. Os encontros são individuais e construídos a partir do seu momento. Se fizer sentido para você, também existe o formato em grupo de até cinco pessoas.</p></details>
+<details class="mac-faq-item"><summary class="h3 mac-heading"><span>O que trabalhamos nos encontros?</span><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="body">Depende do seu momento. Podem entrar comunicação e feedback, perfil comportamental (DISC), valores e talentos, crenças que travam suas escolhas e planejamento de carreira.</p></details>
+<details class="mac-faq-item"><summary class="h3 mac-heading"><span>Como são os encontros?</span><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="body">On-line, pelo Google Meet, com uma hora de duração. A frequência nós combinamos na primeira conversa.</p></details>
+<details class="mac-faq-item"><summary class="h3 mac-heading"><span>Quanto custa?</span><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="body">O valor depende do formato e da frequência. Fale comigo no WhatsApp e explico as opções depois de conhecer seu momento.</p></details>
+</div>
+</div>
+</section>
+
+<footer class="mac-section mac-section--brand" data-section="footer">
+<div class="mac-footer-grid">
+<div class="mac-footer-closing">
+<header class="mac-section-heading"><h2 class="h2 mac-heading mac-on-brand">Quer começar por uma conversa?</h2></header>
+<p class="body mac-on-brand-muted mac-footer-subtitle">A primeira conversa é para nos conhecermos, sem compromisso.</p>
+<a class="button mac-whatsapp-button mac-whatsapp-button--on-brand" href="{{whatsAppHref}}" target="_blank" rel="noopener" data-event="whatsapp_click" data-section="footer"><svg class="mac-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H9l-4 3v-3.5A4 4 0 0 1 3 14V8a4 4 0 0 1 4-4z"></path></svg><span>{{buttonLabel}}</span><span class="mac-visually-hidden"> (abre o WhatsApp em uma nova aba)</span></a>
+</div>
+<div>
+<div class="mac-logo logo-sm mac-logo--on-brand" role="img" aria-label="Me Ajuda Carreira, por Cristina Diniz"><span class="mac-logo-mark" aria-hidden="true">Me ajuda,<br>carreira!</span><span class="mac-logo-signature" aria-hidden="true">Por <b>Cristina Diniz</b></span></div>
+<ul class="mac-footer-links">
+<li><a href="#" target="_blank" rel="noopener" data-event="group_click" data-section="footer">Grupo de conteúdos no WhatsApp</a></li>
+<li><a href="https://www.instagram.com/meajudacarreira/" target="_blank" rel="noopener" data-event="social_click" data-section="footer">Instagram</a></li>
+<li><a href="https://www.linkedin.com/in/cristina-diniz-coral/" target="_blank" rel="noopener" data-event="social_click" data-section="footer">LinkedIn</a></li>
+</ul>
+<p class="small mac-on-brand-muted">Cristina Diniz Coral · Psicóloga · [CRP]</p>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"whatsAppInLabel":{"editor":"boolean","default":false,"section":"Decisões em aberto"},"credentialInHero":{"editor":"boolean","default":false,"section":"Decisões em aberto"},"photoFirstOnMobile":{"editor":"boolean","default":true,"section":"Decisões em aberto"},"$preview":{"width":1280,"height":4600}}'>
+class Component extends DCLogic {
+renderVals() {
+var whatsAppInLabel = this.props.whatsAppInLabel ?? false;
+var credentialInHero = this.props.credentialInHero ?? false;
+var photoFirstOnMobile = this.props.photoFirstOnMobile ?? true;
+return {
+whatsAppHref: 'https://wa.me/5511900000000?text=Oi%2C%20Cris%21%20Vi%20a%20p%C3%A1gina%20de%20mentoria%20de%20carreira%20no%20site%20e%20queria%20contar%20sobre%20o%20meu%20momento.',
+buttonLabel: whatsAppInLabel ? 'Conte sobre seu momento pelo WhatsApp' : 'Conte sobre seu momento',
+credentialInHero: credentialInHero,
+noteInHero: !credentialInHero,
+heroOrderClass: photoFirstOnMobile ? '' : 'lp-photo-after'
+};
+}
+}
+</script>
+</body>
+</html>
